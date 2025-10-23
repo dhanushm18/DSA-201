@@ -4,7 +4,18 @@
 
 class Solution:
     def sortByParity(self, nums: list[int]) -> list[int]:
-        pass
+        # Maintain two pointers: one for even numbers placement
+        even_pos = 0
+        
+        # Iterate through the array
+        for i in range(len(nums)):
+            # If current number is even, place it at even_pos
+            if nums[i] % 2 == 0:
+                # Swap current number with number at even_pos
+                nums[i], nums[even_pos] = nums[even_pos], nums[i]
+                even_pos += 1
+                
+        return nums
 
 # Demo
 if __name__ == '__main__':
