@@ -4,8 +4,11 @@
 
 class Solution:
     def countEven(self, arr: list[int]) -> int:
-        # Count even numbers
-        pass
+        count = 0
+        for num in arr:
+            if num % 2 == 0:
+                count += 1
+        return count
 
 # Demo
 if __name__ == '__main__':

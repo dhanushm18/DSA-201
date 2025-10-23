@@ -4,8 +4,13 @@
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        # Check if the string is a palindrome
-        pass
+        left, right = 0, len(s) - 1
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
 
 # Demo
 if __name__ == '__main__':

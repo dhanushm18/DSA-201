@@ -4,7 +4,16 @@
 
 class Solution:
     def removeDuplicates(self, arr: list[int]) -> int:
-        pass
+        if not arr:
+            return 0
+            
+        # Two pointer technique
+        write_pos = 1
+        for i in range(1, len(arr)):
+            if arr[i] != arr[i-1]:
+                arr[write_pos] = arr[i]
+                write_pos += 1
+        return write_pos
 
 # Demo
 if __name__ == '__main__':

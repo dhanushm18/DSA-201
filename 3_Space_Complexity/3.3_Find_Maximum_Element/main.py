@@ -4,8 +4,12 @@
 
 class Solution:
     def maxElement(self, arr: list[int]) -> int:
-        # Return the maximum element
-        pass
+        # Initialize max with first element
+        max_elem = arr[0]
+        for num in arr[1:]:
+            if num > max_elem:
+                max_elem = num
+        return max_elem
 
 # Demo
 if __name__ == '__main__':

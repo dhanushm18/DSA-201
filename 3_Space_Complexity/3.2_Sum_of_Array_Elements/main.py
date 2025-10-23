@@ -4,7 +4,10 @@
 
 class Solution:
     def sumArray(self, arr: list[int]) -> int:
-        pass
+        total = 0
+        for num in arr:
+            total += num
+        return total
 
 # Demo
 if __name__ == '__main__':

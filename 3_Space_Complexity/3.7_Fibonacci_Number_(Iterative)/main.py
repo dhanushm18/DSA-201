@@ -4,8 +4,15 @@
 
 class Solution:
     def fibonacci(self, n: int) -> int:
-        # Iterative approach to save space
-        pass
+        # Handle base cases
+        if n <= 1:
+            return n
+            
+        # Use two variables to track previous numbers
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
 
 # Demo
 if __name__ == '__main__':

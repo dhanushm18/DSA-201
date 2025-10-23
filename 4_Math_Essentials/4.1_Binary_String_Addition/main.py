@@ -4,7 +4,27 @@
 
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
-        pass
+        # Initialize variables
+        result = []
+        carry = 0
+        i, j = len(a) - 1, len(b) - 1
+        
+        # Process both strings from right to left
+        while i >= 0 or j >= 0 or carry:
+            # Get digits, use 0 if string is exhausted
+            x = int(a[i]) if i >= 0 else 0
+            y = int(b[j]) if j >= 0 else 0
+            
+            # Calculate sum and new carry
+            current_sum = x + y + carry
+            carry = current_sum // 2
+            result.append(str(current_sum % 2))
+            
+            i -= 1
+            j -= 1
+        
+        # Reverse and join the result
+        return ''.join(result[::-1])
 
 # Demo
 if __name__ == '__main__':
