@@ -23,16 +23,12 @@ Input: n=1 → Output: 0
 
 Input: n=100 → Output: 6 
 
-### Approach
-Describe your approach here...
+## Time Complexity
+O(log n)
 
-### Pseudocode
-```
-Write your pseudocode here...
-```
+## Space Complexity
+O(1)
 
-### Time Complexity
-- 
+## Approach
+Each step divides n by 2, counting how many steps until n equals 1. This is because dividing repeatedly by 2 halves the number each time, so the total steps are approximately log base 2 of n.
 
-### Space Complexity
-- 

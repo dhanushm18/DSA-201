@@ -4,6 +4,7 @@
 
 class Solution:
     def sumArray(self, arr: list[int]) -> int:
+        
         pass
 
 # Demo

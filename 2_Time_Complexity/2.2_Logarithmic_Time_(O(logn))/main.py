@@ -4,7 +4,13 @@
 
 class Solution:
     def divideUntilOne(self, n: int) -> int:
-        pass
+        steps=0
+        while n>1:
+            n=n//2
+            steps=steps+1
+
+        return steps
+        
 
 # Demo
 if __name__ == '__main__':

@@ -4,7 +4,7 @@
 
 class Solution:
     def maxOfTwo(self, a: int, b: int) -> int:
-        pass
+        return max(a,b)
 
 # Demo
 if __name__ == '__main__':

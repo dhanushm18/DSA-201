@@ -4,7 +4,17 @@
 class Solution:  
     def recursiveDigitSum(self, n: int) -> int:  
         # Implement using recursion  
-        return 0 
+        if n < 10:
+            return n
+        
+        sum=0
+        while n > 0:
+            sum=sum+(n%10)
+            n=n//10
+        
+        
+             
+        return self.recursiveDigitSum(sum)
 # Demo   
 if __name__ == '__main__':
     sol = Solution() 
