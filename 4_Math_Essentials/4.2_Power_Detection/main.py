@@ -4,8 +4,8 @@
 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        # Check if n is a power of two using bit manipulation
-        pass
+        # Check if n is positive and has exactly one bit set
+        return n > 0 and (n & (n - 1)) == 0
 
 # Demo
 if __name__ == '__main__':

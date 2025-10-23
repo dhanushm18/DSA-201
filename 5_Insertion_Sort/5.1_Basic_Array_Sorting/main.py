@@ -4,7 +4,16 @@
 
 class Solution:
     def insertionSort(self, nums: list[int]) -> list[int]:
-        pass
+        # Start from the second element
+        for i in range(1, len(nums)):
+            key = nums[i]
+            # Move elements that are greater than key to one position ahead
+            j = i - 1
+            while j >= 0 and nums[j] > key:
+                nums[j + 1] = nums[j]
+                j -= 1
+            nums[j + 1] = key
+        return nums
 
 # Demo
 if __name__ == '__main__':
