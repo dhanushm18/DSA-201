@@ -5,7 +5,16 @@
 
 class Solution:
     def allSubsets(self, arr: list[int]) -> list[list[int]]:
-        pass
+        n = len(arr)
+        result = []
+        # Generate all possible combinations using binary numbers
+        for i in range(2**n):
+            subset = []
+            for j in range(n):
+                if i & (1 << j):
+                    subset.append(arr[j])
+            result.append(subset)
+        return result
 
 # Demo
 if __name__ == '__main__':

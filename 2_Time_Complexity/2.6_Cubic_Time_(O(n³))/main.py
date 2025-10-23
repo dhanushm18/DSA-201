@@ -4,7 +4,12 @@
 
 class Solution:
     def allTriplets(self, arr: list[int]) -> list[tuple[int,int,int]]:
-        pass
+        result = []
+        for i in arr:
+            for j in arr:
+                for k in arr:
+                    result.append((i,j,k))
+        return result
 
 # Demo
 if __name__ == '__main__':

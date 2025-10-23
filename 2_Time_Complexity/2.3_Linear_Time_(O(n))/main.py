@@ -4,8 +4,7 @@
 
 class Solution:
     def sumArray(self, arr: list[int]) -> int:
-        
-        pass
+        return sum(arr)
 
 # Demo
 if __name__ == '__main__':

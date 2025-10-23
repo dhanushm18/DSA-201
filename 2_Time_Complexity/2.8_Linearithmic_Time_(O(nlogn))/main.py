@@ -4,7 +4,10 @@
 
 class Solution:
     def halveAndPrint(self, n: int) -> None:
-        pass
+        while n >= 1:
+            print(*range(1, n+1))
+            n = n // 2
+
 # Demo
 if __name__ == '__main__':
     sol = Solution()

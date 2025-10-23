@@ -4,7 +4,12 @@
 
 class Solution:
     def allPairs(self, arr: list[int]) -> list[tuple[int,int]]:
-        pass
+        result = []
+        for i in arr:
+            for j in arr:
+                result.append((i,j))
+        return result
+
 # Demo
 if __name__ == '__main__':
     sol = Solution()
